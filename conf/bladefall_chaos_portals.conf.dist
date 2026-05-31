@@ -1,0 +1,101 @@
+#
+# BladeFall Chaos Portals module configuration
+#
+
+[worldserver]
+
+########################################
+# BladeFall Chaos Portals
+########################################
+
+#
+# BladeFall.ChaosPortals.Enable
+#   Description: Enables random Chaos Portal encounters.
+#   Default:     1
+#
+
+BladeFall.ChaosPortals.Enable = 1
+
+#
+# BladeFall.ChaosPortals.SpawnIntervalMs
+#   Description: Delay between the completion of an encounter and the next
+#                attempt to open a Chaos Portal.
+#   Default:     600000 - 10 minutes
+#
+
+BladeFall.ChaosPortals.SpawnIntervalMs = 600000
+
+#
+# BladeFall.ChaosPortals.DurationMs
+#   Description: Time allowed to defeat all summoned creatures.
+#   Default:     60000 - 1 minute
+#
+
+BladeFall.ChaosPortals.DurationMs = 60000
+
+#
+# BladeFall.ChaosPortals.MinCreatures
+# BladeFall.ChaosPortals.MaxCreatures
+#   Description: Random number of creatures summoned by a portal.
+#   Default:     1 / 5
+#
+
+BladeFall.ChaosPortals.MinCreatures = 1
+BladeFall.ChaosPortals.MaxCreatures = 5
+
+#
+# BladeFall.ChaosPortals.DamageMultiplier
+#   Description: Melee damage multiplier applied to summoned creatures.
+#   Default:     0.90
+#
+
+BladeFall.ChaosPortals.DamageMultiplier = 0.90
+
+#
+# BladeFall.ChaosPortals.RewardItem
+#   Description: Item ID for Chaos Shards.
+#   Default:     900001
+#
+
+BladeFall.ChaosPortals.RewardItem = 900001
+
+#
+# BladeFall.ChaosPortals.ShardsPerCreature
+#   Description: Number of Chaos Shards rewarded per summoned creature after
+#                successful completion.
+#   Default:     1
+#
+
+BladeFall.ChaosPortals.ShardsPerCreature = 1
+
+#
+# BladeFall.ChaosPortals.FailureStatsPenaltyPct
+#   Description: Percentage reduction of all stats after failure.
+#   Default:     10
+#
+
+BladeFall.ChaosPortals.FailureStatsPenaltyPct = 10
+
+#
+# BladeFall.ChaosPortals.FailureDebuffDurationMs
+#   Description: Duration of the failure debuff.
+#   Default:     60000 - 1 minute
+#
+
+BladeFall.ChaosPortals.FailureDebuffDurationMs = 60000
+
+#
+# BladeFall.ChaosPortals.PortalGameObject
+#   Description: GameObject template ID for the Chaos Portal.
+#   Default:     900001
+#
+
+BladeFall.ChaosPortals.PortalGameObject = 900001
+
+#
+# BladeFall.ChaosPortals.CreatureEntry
+#   Description: Creature template ID summoned from Chaos Portals.
+#   Default:     900001
+#
+
+BladeFall.ChaosPortals.CreatureEntry = 900001
