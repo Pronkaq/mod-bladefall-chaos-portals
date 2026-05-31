@@ -142,6 +142,9 @@ SET
     `mingold` = 0,
     `maxgold` = 0,
     `AIName` = '',
+    `DamageModifier` = 1,
+    `HealthModifier` = 1,
+    `ExperienceModifier` = 0,
     `ScriptName` = 'npc_bladefall_chaos_invader',
     `VerifiedBuild` = NULL;
 
@@ -220,3 +223,32 @@ SELECT *
 FROM `tmp_bladefall_chaos_weakness`;
 
 DROP TEMPORARY TABLE IF EXISTS `tmp_bladefall_chaos_weakness`;
+
+--
+-- Server-side Item.dbc overlay for the custom Chaos Shard item.
+--
+DELETE FROM `item_dbc`
+WHERE `ID` = 900001;
+
+INSERT INTO `item_dbc`
+(
+    `ID`,
+    `ClassID`,
+    `SubclassID`,
+    `Sound_Override_Subclassid`,
+    `Material`,
+    `DisplayInfoID`,
+    `InventoryType`,
+    `SheatheType`
+)
+SELECT
+    900001,
+    `class`,
+    `subclass`,
+    `SoundOverrideSubclass`,
+    `Material`,
+    `displayid`,
+    `InventoryType`,
+    `sheath`
+FROM `item_template`
+WHERE `entry` = 900001;
